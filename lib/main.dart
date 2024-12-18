@@ -20,7 +20,7 @@ class _SkillithonState extends State<Skillithon> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DashBoard_screen(),
+      home: Splash_screen(),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:skillithon/constant/my_color.dart';
 import 'package:skillithon/custom_widgets/custom_button.dart';
+import 'package:skillithon/ui/Admin_dashboard/Application_form.dart';
+import 'package:skillithon/ui/Login%20And%20Signup/login.dart';
 
 class DashBoard_screen extends StatefulWidget {
   const DashBoard_screen({super.key});
@@ -20,12 +22,12 @@ class _DashBoard_screenState extends State<DashBoard_screen> {
   ];
 
   List<String> _discription_list = [
-    'Application development using Flutter',
-    'Networking Description',
-    '3',
-    '4',
-    '6',
-    '7'
+    'Description',
+    'Description',
+    'Description',
+    'Description',
+    'Description',
+    'Description'
   ];
 
   @override
@@ -33,6 +35,14 @@ class _DashBoard_screenState extends State<DashBoard_screen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("DashBoard"),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => LoginScreen()));
+              },
+              icon: Icon(Icons.logout))
+        ],
       ),
       body: Container(
         height: double.infinity,
@@ -88,7 +98,12 @@ class _DashBoard_screenState extends State<DashBoard_screen> {
                                     B_height: 40.0,
                                     B_text: "Apply",
                                     B_width: 80.0,
-                                    ontap: () {})
+                                    ontap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Application_form()));
+                                    })
                               ],
                             ),
                           ),

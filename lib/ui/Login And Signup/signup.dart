@@ -170,8 +170,8 @@ class _Signup_screenState extends State<Signup_screen> {
                                     _passwordController.text.isEmpty ||
                                     _nameController.text.isEmpty ||
                                     _phoneNumberber.text.isEmpty) {
-                                  Utils().Toast_msg(
-                                      'Enter the valid Dat', Colors.blue);
+                                  Utils()
+                                      .Toast_msg('Enter the Data', Colors.red);
                                 } else {
                                   Utils().Toast_msg(
                                       'SignUp Successfull', Colors.blue);

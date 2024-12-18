@@ -3,7 +3,9 @@ import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:skillithon/constant/my_color.dart';
 import 'package:skillithon/custom_widgets/custom_button.dart';
+import 'package:skillithon/ui/Admin_dashboard/admin_dashboard.dart';
 import 'package:skillithon/ui/Login%20And%20Signup/signup.dart';
+import 'package:skillithon/utils/flutter_toast.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -74,6 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 50,
                           ),
                           TextFormField(
+                            style: TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                                 hintText: "Enter your Email",
                                 hintStyle: TextStyle(
@@ -92,6 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 20,
                           ),
                           TextFormField(
+                            style: TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                                 hintText: "Password",
                                 hintStyle: TextStyle(
@@ -112,9 +116,22 @@ class _LoginScreenState extends State<LoginScreen> {
                           Custom_Button(
                               B_color: const Color.fromARGB(255, 62, 134, 172),
                               B_height: 45.0,
-                              B_text: "REGISTER",
+                              B_text: "LogIn",
                               B_width: 130.0,
-                              ontap: () {}),
+                              ontap: () {
+                                // if (_emailContoler.text.isEmpty ||
+                                //     _passwordController.text.isEmpty) {
+                                //   Utils()
+                                //       .Toast_msg("Enter the Data", Colors.red);
+                                // } else {
+                                //   Navigator.of(context).push(MaterialPageRoute(
+                                //       builder: (BuildContext context) =>
+                                //           DashBoard_screen()));
+                                // }
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        DashBoard_screen()));
+                              }),
                           SizedBox(
                             height: 10,
                           ),
