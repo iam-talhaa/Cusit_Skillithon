@@ -12,6 +12,7 @@ class Application_form extends StatefulWidget {
 class _Application_formState extends State<Application_form> {
   @override
   Widget build(BuildContext context) {
+    print("object");
     return Scaffold(
       appBar: AppBar(
         title: Text('Submit Application Form'),
